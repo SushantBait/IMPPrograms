@@ -34,7 +34,17 @@ public class StringPalindrome {
 		return reversebyRecursion(str.substring(1))+str.charAt(0);
 	}
 	static String reverseByCollection(String str){
-		return null;
+		List<Character> list = new ArrayList<Character>();
+		 for (char c: str.toCharArray()) {
+	            list.add(c);
+	        }
+		 Collections.reverse(list);
+		 StringBuilder builder = new StringBuilder(list.size());
+	        for (Character c: list) {
+	            builder.append(c);
+	        }
+	 
+	        return builder.toString();
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
